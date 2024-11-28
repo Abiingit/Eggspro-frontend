@@ -95,8 +95,8 @@ const TwoCardCarousel = () => {
             <Text style={{fontWeight:'900',color:"#0f0f0f"}}>{item.product}</Text>
             <Text style={{fontWeight:'900',color:"#0f0f0f"}}>{item.quantity}</Text>
             <View style={{flexDirection:'row',gap:38}}>
-            <Text style={{fontWeight:'900',color:'#8b4513'}}>{item.rupees}</Text>
-            <TouchableOpacity style={{backgroundColor:'#8b4513',borderRadius:5,padding:2,height:20,width:50,alignItems:'center',marginBottom:5}}><Text style={{fontSize:13,fontWeight:'900',color:'#fff'}}>+ Add</Text></TouchableOpacity>
+            <Text style={{fontWeight:'900',color:'#5a3e36'}}>{item.rupees}</Text>
+            <TouchableOpacity style={{backgroundColor:'#5a3e36',borderRadius:5,padding:2,height:20,width:50,alignItems:'center',marginBottom:5}}><Text style={{fontSize:13,fontWeight:'900',color:'#fff'}}>+ Add</Text></TouchableOpacity>
             </View>
             <Text style={{fontSize:10,color:'#0f0f0f'}}>{item.description}</Text>
             </View>
@@ -134,14 +134,14 @@ const OrderrenderItem = ({ item }: { item: { id: string; image: any; product:str
     alignItems:'center',
     justifyContent:'center',
     borderStartStartRadius:40,
-    }}><Text style={{fontSize:30,fontWeight:'900',color:'#8b4513',left:3}}>+</Text>
+    }}><Text style={{fontSize:30,fontWeight:'900',color:'#5a3e36',left:3}}>+</Text>
     </TouchableOpacity>
     </View>
     <View style={{padding:7}}>
     <Text style={{fontWeight:'900',color:'#000'}}>{item.product}</Text>
     <View style={{flexDirection:'row',gap:5}}>
       <Text style={{color:'#000', textDecorationLine:'line-through'}}>{item.strkamt}</Text>
-      <Text style={{color:'#8b4513',fontWeight:'bold',fontSize:17,textAlign:'center'}}>{item.amount}</Text>
+      <Text style={{color:'#5a3e36',fontWeight:'bold',fontSize:17,textAlign:'center'}}>{item.amount}</Text>
     </View>
     <Text style={{color:"#000",marginTop:5,fontSize:10, fontWeight:'600',lineHeight:15}}>{item.description}</Text>
     </View>
@@ -355,7 +355,7 @@ const styles = StyleSheet.create({
   menuIcon: {
     width: 30,
     height: 30,
-    tintColor:'#8b4513',
+    tintColor:'#5a3e36',
   },
   searchContainer:
     { flexDirection: 'row', 
@@ -428,14 +428,14 @@ offerImage: {
   },
   navText: {
     fontSize: 18,
-    color: '#8b4513',
+    color: '#5a3e36',
     fontWeight:'900',
     marginLeft:30,
   },
   navImg:{
     width:30,
     height:30,
-    tintColor:"#8b4513",
+    tintColor:"#5a3e36",
     marginLeft:30,
   },
   carouselContainer2: {
@@ -476,7 +476,7 @@ offerImage: {
   },
   arrowText: {
     fontSize: 15,
-    color: '#8b4513',
+    color: '#5a3e36',
     alignSelf:'center',
     fontWeight:'900'
   },

@@ -72,13 +72,13 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   backText: {
-    color: '#8B4513',
+    color: '#5a3e36',
     fontWeight: 'bold',
   },
   header: {
     fontSize: 25,
     marginBottom: 10,
-    color: "#8B4513",
+    color: "#5a3e36",
     fontWeight: '900',
   },
   description: {
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     color:"#000"
   },
   sendButton: {
-    backgroundColor: '#8B4513',
+    backgroundColor: '#5a3e36',
     padding: 15,
     borderRadius: 5,
     width: '100%',
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   loginText: {
-    color: '#8B4513',
+    color: '#5a3e36',
     fontWeight: 'bold',
   },
 });

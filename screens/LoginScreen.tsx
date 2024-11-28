@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground,Al
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import FloatingLabelInput from './FloatingLabelInput';
 import CheckBox from '@react-native-community/checkbox'; // Import the checkbox
+import { Modal } from 'react-native-paper';
 
 type Props = {
   navigation: NativeStackNavigationProp<any, any>;
@@ -11,10 +12,10 @@ type Props = {
 const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [isSelected, setSelection] = useState<boolean>(false); // Checkbox state
+  const [isSelected, setSelection] = useState<boolean>(false); 
 
   const handleLogin = () => {
-    if (email === 'abi' && password === '123') {
+    if (email === 'admin' && password === '123') {
       navigation.navigate('Dashboard');
     } else {
       Alert.alert('Invalid credentials');
@@ -22,10 +23,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground
-      source={{ uri: 'https://thumbs.dreamstime.com/b/chicken-brown-eggs-black-crumpled-paper-50186405.jpg' }}
-      style={styles.background}
-    >
+    <View style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.header}>Login</Text>
         <Text style={styles.headertext}>Login to access your Hospital account</Text>
@@ -48,7 +46,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
           <CheckBox
             value={isSelected}
             onValueChange={setSelection}
-            tintColors={{ true: '#8B4513', false: '#000' }} // Change color based on selection
+            tintColors={{ true: '#5a3e36', false: '#000' }} // Change color based on selection
           />
           <Text style={styles.rememberMeText}>Remember Me</Text>
 <Text style={styles.forgotPasswordText} onPress={() => navigation.navigate('ForgotPassword')}>Forgot Password?</Text>        
@@ -63,7 +61,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
           <Text style={styles.signUpText} onPress={() => navigation.navigate('Signup')}> Sign up</Text>
         </Text>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
@@ -72,6 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
+    backgroundColor:'#fff'
   },
   container: {
     margin: 25,
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom: 0,
     marginLeft: 5,
     marginRight: 'auto',
-    color: "#8B4513",
+    color: "#5a3e36",
     fontWeight: '900'
   },
   headertext: {
@@ -111,11 +110,11 @@ const styles = StyleSheet.create({
   },
   forgotPasswordText: {
     marginLeft:80,
-    color: '#8B4513',
+    color: '#5a3e36',
     fontWeight: 'bold',
   },
   loginButton: {
-    backgroundColor: '#8B4513',
+    backgroundColor: '#5a3e36',
     padding: 15,
     borderRadius: 5,
     width: '100%',
@@ -131,7 +130,7 @@ const styles = StyleSheet.create({
     color: "#000"
   },
   signUpText: {
-    color: '#8B4513',
+    color: '#5a3e36',
     fontWeight: 'bold',
   },
 });

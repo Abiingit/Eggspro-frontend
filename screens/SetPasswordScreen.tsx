@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginBottom: 20,
     marginLeft: 5,
-    color: "#8B4513",
+    color: "#5a3e36",
     fontWeight: '900',
   },
   input: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   setPasswordButton: {
-    backgroundColor: '#8B4513',
+    backgroundColor: '#5a3e36',
     padding: 15,
     borderRadius: 5,
     width: '100%',

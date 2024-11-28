@@ -63,7 +63,7 @@ const SignupScreen: React.FC<Props> = ({ navigation }) => {
           <CheckBox
             value={isAgreed}
             onValueChange={setAgreed}
-            tintColors={{ true: '#8B4513', false: '#000' }} // Change color based on selection
+            tintColors={{ true: '#5a3e36', false: '#000' }} // Change color based on selection
           />
           <Text style={styles.agreeText}>I agree to all terms and privacy policies</Text>
         </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginLeft: 5,
     marginRight: 'auto',
-    color: "#8B4513",
+    color: "#5a3e36",
     fontWeight: '900',
   },
   checkboxContainer: {
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   createButton: {
-    backgroundColor: '#8B4513',
+    backgroundColor: '#5a3e36',
     padding: 15,
     borderRadius: 5,
     width: '100%',
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     color: "#000",
   },
   loginText: {
-    color: '#8B4513',
+    color: '#5a3e36',
     fontWeight: 'bold',
   },
 });

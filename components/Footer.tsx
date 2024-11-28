@@ -18,7 +18,7 @@ const data = [
   
 ];
 
-const activeColor = '#8b4513';
+const activeColor = '#5a3e36';
 const inactiveColor='#000000'; 
 
 // Render each footer item with dynamic tint color based on the current route

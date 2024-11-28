@@ -93,15 +93,15 @@ import { SafeAreaView } from 'react-native-safe-area-context';
         <View style={{padding:7}}>
             <Text style={{color:'#0f0f0f',fontWeight:'900',fontSize:12}}>{item.title}</Text>
             <Text style={{color:'#0f0f0f',fontWeight:'900',fontSize:10}}>{item.details}</Text>
-            <Text style={{color:'#8b4513',fontWeight:'900',fontSize:11}}>{item.rating}</Text>
+            <Text style={{color:'#5a3e36',fontWeight:'900',fontSize:11}}>{item.rating}</Text>
             <Text style={{color:'#0f0f0f',fontWeight:'bold',}}>{item.offer}% Off</Text>
             <View style={{flexDirection:'row',gap:10}}>
             <Text style={{color:'#000',textDecorationLine:'line-through',fontSize:12}}>Rs.{item.amount}</Text>
-            <Text style={{color:'#8b4513',fontWeight:'900',fontSize:14}}>Rs.{item.strkamt}</Text>
+            <Text style={{color:'#5a3e36',fontWeight:'900',fontSize:14}}>Rs.{item.strkamt}</Text>
             </View>
             <Text style={{color:'#0f0f0f',fontSize:9}}>{item.description}</Text>
             <View style={{flexDirection:'row',gap:7,margin:3}}>
-                <TouchableOpacity style={{backgroundColor:'#8b4513',flex:1,alignItems:'center',borderRadius:3,height:20,padding:3}}><Text style={{fontWeight:'900',fontSize:10,color:'#fff'}}>Add</Text></TouchableOpacity>
+                <TouchableOpacity style={{backgroundColor:'#5a3e36',flex:1,alignItems:'center',borderRadius:3,height:20,padding:3}}><Text style={{fontWeight:'900',fontSize:10,color:'#fff'}}>Add</Text></TouchableOpacity>
                 <TouchableOpacity style={{backgroundColor:'#ddd',height:20,width:20,borderRadius:4}}></TouchableOpacity>
                 <TouchableOpacity style={{backgroundColor:'#ddd',height:20,width:20,borderRadius:4}}></TouchableOpacity>
             </View>
@@ -183,11 +183,11 @@ import { SafeAreaView } from 'react-native-safe-area-context';
         <View style={{flexDirection:'row',alignItems:'center',gap:10}}><Image source={require('../assets/images/yourorders.png')} style={{height:30,width:30}}/><Text style={{color:'#0f0f0f',fontWeight:'900'}}>Delivery Options</Text></View>
         <View style={styles.pincodeContainer}>
           <TextInput placeholder="Enter Pincode" placeholderTextColor='#000' style={styles.pincodeInput} />
-          <Button mode="contained" textColor='#8b4513'style={{backgroundColor:'transparent'}}onPress={() => {}}>Check</Button>
+          <Button mode="contained" textColor='#5a3e36'style={{backgroundColor:'transparent'}}onPress={() => {}}>Check</Button>
         </View>
 
         {/* Add to Cart Button */}
-        <Button mode="contained" buttonColor='#8b4513' style={styles.addToCartButton}>Add to Cart</Button>
+        <Button mode="contained" buttonColor='#5a3e36' style={styles.addToCartButton}>Add to Cart</Button>
       </View>
 
       {/* Features List */}
@@ -240,7 +240,7 @@ const styles = StyleSheet.create({
     categoryContainer: { paddingBottom: 10,alignItems:'stretch'},
     categoryBox: { padding:9,margin:2,borderWidth: 1, borderColor:'#ddd', borderRadius:11,backgroundColor:'#fff',width:'31%',alignItems:'center'},
     categoryText:{color:'#d2b593',fontSize:12,fontWeight:'600'},
-    selectedCategory: { backgroundColor: '#8b4513', },
+    selectedCategory: { backgroundColor: '#5a3e36', },
     selectedCategoryText:{color:'#fff',fontWeight:'600'},
     productList: { paddingTop:0 },
     Productcard: {
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius:30,
     },
     scrollviewContainer:{padding:0,flexGrow:1,backgroundColor:'#fff'},
-    header: { flexDirection: 'row', alignItems: 'center', padding:15, backgroundColor: '#8b4513',justifyContent: 'center',height: 60},
+    header: { flexDirection: 'row', alignItems: 'center', padding:15, backgroundColor: '#5a3e36',justifyContent: 'center',height: 60},
     headerText: { fontSize: 20, fontWeight: 'bold', flex: 1,color:'#fff'},
     iconImage:{height:30,width:30,tintColor:'#fff'},
     imageSlider: { alignItems: 'center', marginTop: 16,borderWidth:2,borderColor:'#ddd',borderRadius:10,padding:10,marginHorizontal:15,paddingBottom:30 },
@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
     rating: { marginVertical: 8, color: '#0f0f0f',fontWeight:'900',fontSize:12},
     discountText: { color: '#0f0f0f', fontWeight: 'bold',fontSize:20 },
     oldPrice: { fontSize: 20,textDecorationLine: 'line-through', color: '#888' },
-    newPrice: { fontSize: 20, fontWeight: 'bold', color: '#8b4513' },
+    newPrice: { fontSize: 20, fontWeight: 'bold', color: '#5a3e36' },
     productDescription: { marginVertical: 8, color: '#555' },
     freeShipping: { marginVertical: 4, color: '#0f0f0f',fontWeight:'900' },
     pincodeContainer: { flexDirection: 'row', alignItems: 'center', marginVertical: 8,borderWidth:2,borderColor:'#ddd',width:300,height:50},

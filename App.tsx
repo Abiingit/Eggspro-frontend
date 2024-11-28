@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar, TouchableOpacity, Image } from 'react-native';
+import { StatusBar, TouchableOpacity, Image,Text } from 'react-native';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
@@ -11,7 +11,10 @@ import DashboardScreen from './screens/DashboardScreen';
 import ProductScreen from './screens/ProductScreen';
 import YourCartScreen from './screens/YourCartScreen';
 import AddressScreen from './screens/ShipToScreen';
-
+import EditOrAddNewAddress from './screens/AddressDetailsScreen';
+import PaymentScreen from './screens/PaymentScreen';
+import AddCardScreen from './screens/AddCardScreen';
+import SuccessScreen from './screens/SuceessScreen';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -90,7 +93,7 @@ const App = () => {
           component={ProductScreen}  
           options={({ navigation }) => ({
             title: 'Products',
-            headerStyle: { backgroundColor: '#8b4513' },
+            headerStyle: { backgroundColor: '#5a3e36' },
             headerTitleStyle: { fontWeight: 'bold' },
             headerTintColor: '#fff',
             headerLeft: () => (
@@ -116,7 +119,7 @@ const App = () => {
           component={YourCartScreen}
           options={({ navigation }) => ({
             title: 'Your Cart',
-            headerStyle: { backgroundColor: '#8b4513' },
+            headerStyle: { backgroundColor: '#5a3e36' },
             headerTitleStyle: { fontWeight: 'bold' },
             headerTintColor: '#fff',
             headerLeft: () => (
@@ -136,11 +139,36 @@ const App = () => {
           component={AddressScreen} 
           options={({navigation})=> ({
             title: 'Ship To',
-            headerStyle: { backgroundColor: '#8b4513' },
+            headerStyle: { backgroundColor: '#5a3e36' },
             headerTitleStyle: { fontWeight: 'bold' },
             headerTintColor: '#fff',
             headerLeft: () => (
-              <TouchableOpacity onPress={() => navigation.navigate('Products')}>
+              <TouchableOpacity onPress={() => navigation.navigate('YourCart')}>
+                <Image
+                  source={require('./assets/images/header.png')}
+                  style={{ width: 24, height: 24, marginRight: 10,tintColor:'#fff' }}
+                />
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity onPress={() => navigation.navigate('EditDetails')}>
+                <Text style={{fontSize:40,color:'#fff'}}>+</Text>
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Stack.Screen 
+          name="AddressDetails" 
+          component={EditOrAddNewAddress}
+          options={({ navigation }) => ({
+            title: 'Edit or Add New',
+            headerStyle: { backgroundColor: '#5a3e36' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: '#fff',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() =>{if (navigation.canGoBack()) {
+                navigation.goBack();
+              }}}>
                 <Image
                   source={require('./assets/images/header.png')}
                   style={{ width: 24, height: 24, marginRight: 10,tintColor:'#fff' }}
@@ -149,9 +177,60 @@ const App = () => {
             ),
           })}
         />
+        <Stack.Screen 
+          name="Payment" 
+          component={PaymentScreen}
+          options={({ navigation }) => ({
+            title: 'Payment',
+            headerStyle: { backgroundColor: '#5a3e36' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: '#fff',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() =>{if (navigation.canGoBack()) {
+                navigation.goBack();
+              }}}>
+                <Image
+                  source={require('./assets/images/header.png')}
+                  style={{ width: 24, height: 24, marginRight: 10,tintColor:'#fff' }}
+                />
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Stack.Screen 
+          name="AddCard" 
+          component={AddCardScreen}
+          options={({ navigation }) => ({
+            title: 'Add Card',
+            headerStyle: { backgroundColor: '#5a3e36' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: '#fff',
+            headerLeft: () => (
+              <TouchableOpacity onPress={() =>{if (navigation.canGoBack()) {
+                navigation.goBack();
+              }}}>
+                <Image
+                  source={require('./assets/images/header.png')}
+                  style={{ width: 24, height: 24, marginRight: 10,tintColor:'#fff' }}
+                />
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Stack.Screen 
+          name="Success" 
+          component={SuccessScreen}
+            options={{
+              title: '',
+              headerStyle: { backgroundColor: 'transparent' },
+              headerTitleStyle: { fontWeight: 'bold' },
+              headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
 export default App;
+
