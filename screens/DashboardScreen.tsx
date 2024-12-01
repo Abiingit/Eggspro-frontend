@@ -265,7 +265,7 @@ const DashboardScreen = () => {
          numColumns={3} 
          key={4}
          columnWrapperStyle={{gap:10}}
-         style={{marginLeft:20,margin:'auto',marginTop:5}}
+         style={styles.categories}
         />
         </View>
 
@@ -380,17 +380,20 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   offerBanner: {
-    backgroundColor: '#ffdd99', // Maintain original background color
-    borderRadius: 12, // Slightly larger border radius for a softer look
-    elevation:5, // Adds shadow on Android
+    backgroundColor: '#ffdd99', 
+    borderRadius: 12, 
+    elevation:5,
     marginLeft:10,
     marginRight:30,
     },
 offerImage: {
   width: '100%',
-  height:200, // Slightly larger height for the image
-  borderRadius: 12, // Matching the banner's border radius
+  height:200, 
+  borderRadius: 12, 
   resizeMode:'stretch',
+},
+categories:{
+alignSelf:'center'
 },
   CatImage:{
     width: 100,
@@ -402,6 +405,7 @@ offerImage: {
     marginVertical:5,
     margin:5,
     alignContent:'center'
+    
   },
   cardTitle: {
     fontSize: 16,
