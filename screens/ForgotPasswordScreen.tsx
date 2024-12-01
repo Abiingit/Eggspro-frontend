@@ -20,10 +20,7 @@ const ForgotPasswordScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground
-    source={{ uri: 'https://thumbs.dreamstime.com/b/chicken-brown-eggs-black-crumpled-paper-50186405.jpg' }}
-    style={styles.background}
-    >
+    <View style={styles.background}>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.backButton}>
           <Text style={styles.backText}>{'< Back to Login'}</Text>
@@ -49,7 +46,7 @@ const ForgotPasswordScreen: React.FC<Props> = ({ navigation }) => {
           <Text style={styles.loginText} onPress={() => navigation.navigate('Login')}> Login</Text>
         </Text>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

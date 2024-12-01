@@ -11,8 +11,11 @@ const VerifyCodeScreen: React.FC<Props> = ({ navigation }) => {
   const [code, setCode] = useState('');
 
   const handleVerify = () => {
-    // Here you would typically check the verification code
-    navigation.navigate('Password'); // Navigate to the password reset screen
+    if(code){
+    navigation.navigate('SetPassword'); }
+    else{
+      Alert.alert('Please enter the code.');
+    }
   };
 
   const handleResendCode = () => {
@@ -20,10 +23,7 @@ const VerifyCodeScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground
-    source={{ uri: 'https://thumbs.dreamstime.com/b/chicken-brown-eggs-black-crumpled-paper-50186405.jpg' }}
-    style={styles.background}
-    >
+    <View style={styles.background}>
       <View style={styles.container}>
         <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.backButton}>
           <Text style={styles.backText}>{'< Back to Login'}</Text>
@@ -40,7 +40,7 @@ const VerifyCodeScreen: React.FC<Props> = ({ navigation }) => {
           secureTextEntry
         />
 
-        <TouchableOpacity style={styles.verifyButton} onPress={() => navigation.navigate('SetPassword')}>
+        <TouchableOpacity style={styles.verifyButton} onPress={handleVerify}>
           <Text style={styles.verifyText}>Verify</Text>
         </TouchableOpacity>
          <Text style={{color:"#000"}}>Didn't Receive a code?</Text>
@@ -48,7 +48,7 @@ const VerifyCodeScreen: React.FC<Props> = ({ navigation }) => {
           Resend
         </Text>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

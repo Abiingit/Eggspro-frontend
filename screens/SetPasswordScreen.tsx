@@ -21,10 +21,7 @@ const SetPasswordScreen: React.FC<Props> = ({ navigation }) => {
   };
 
   return (
-    <ImageBackground
-    source={{ uri: 'https://thumbs.dreamstime.com/b/chicken-brown-eggs-black-crumpled-paper-50186405.jpg' }}
-      style={styles.background}
-    >
+    <View style={styles.background}>
       <View style={styles.container}>
         <Text style={styles.header}>Set Password</Text>
 
@@ -48,7 +45,7 @@ const SetPasswordScreen: React.FC<Props> = ({ navigation }) => {
           <Text style={styles.setPasswordText}>Set Password</Text>
         </TouchableOpacity>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
